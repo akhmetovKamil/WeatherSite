@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link href="styles/global.css" rel="stylesheet" />
+    <link href="styles/header.css" rel="stylesheet" />
+    <link href="styles/footer.css" rel="stylesheet" />
+    <link href="styles/aside.css" rel="stylesheet" />
+    <link href="styles/nav.css" rel="stylesheet" />
+    <link href="styles/section.css" rel="stylesheet" />
+    <meta property="og:title" content="Погода Онлайн!" />
+    <meta property="og:description" content="Узнайте погоду в любой точке мира за 1 клик" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://cdn.ruplay.market/data/images/2152e6f0-d33d-4d73-ab25-925e351a77b6" />
+    <meta property="og:image:alt" content="Погода" />
+    <meta property="og:image:width" content="100" />
+    <meta property="og:image:height" content="100" />
+</head>
+
+<body>
+    <div class='screen_wrapper'>
+        <header class='main-header container'>
+            <h1 class='header-web-name'>WeatherApp</h1>
+            <div class='search'>
+                <input placeholder='Казань' id='city-input' />
+                <button class='search-button'>Поиск</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Тема</button>
+                <div class="dropdown-content">
+                    <button id='dark' onclick="changeTheme()" href="#">Темная</button>
+                    <button id='light' onclick="changeTheme()" href="#">Светлая</button>
+                </div>
+            </div>
+        </header>
+        <div class='main-wrapper'>
+            <nav class="container">
+            </nav>
+            <section class="container">
+                <header>
+                    <div class='date-header'>
+                        <p id='city-name'>Мещеряково</p>
+                        <p id='date'>26.04.2024</p>
+                    </div>
+                </header>
+                <article class='section-article'>
+                    <div class='cur-weather-container'>
+                        <div class='cur-weather'>
+                            <h2 class='temp'>25°</h2>
+                            <div class='dop-weather'>
+                                <h3>50 м/с</h3>
+                                <h3>70 %</h3>
+                            </div>
+                        </div>
+                        <div class='weather-state'>
+                            <h2>Ясно</h2>
+                            <img class="weather-img" src="#" alt="Текущая погода">
+                        </div>
+                    </div>
+                    <article></article>
+                </article>
+                <footer class='section-footer'></footer>
+            </section>
+            <aside class="container">
+            </aside>
+        </div>
+
+    </div>
+    <footer class='footer'>
+        <div class='footer-wrapper'>
+            <div role='Отправка формы на сервер' class='form'>
+                <p>Нашли ошибку в данных?</p>
+                <p>Оставьте номер и мы свяжемся с вами</p>
+                <input type="text" placeholder="Максим" required>
+                <input type="text" placeholder="+79547433231" required>
+                <button aria-label="Send number">Отправить!</button>
+            </div>
+            <div role='Наши партнеры' class='chat'>
+                <p>Смотрите новости у наших партнеров!</p>
+                <iframe src="https://www.gismeteo.ru/news/" style="width:100%; height: 100%;"></iframe>
+            </div>
+            <div role='Наше расположение' class="map">
+                <p>Расположение нашего офиса</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d445.1730148073359!2d49.10961262990386!3d55.784024896770745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead1c62ed41a9%3A0x47f1e001764bf609!2z0KPRgNGD0LzRh9C4!5e0!3m2!1sru!2sru!4v1716135148627!5m2!1sru!2sru"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <p id='year'>© Онлайн Сервис "Погода Онлайн!", </p>
+    </footer>
+    <script src='script.js'></script>
+</body>
+
+</html>

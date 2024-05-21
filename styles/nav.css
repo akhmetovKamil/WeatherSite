@@ -1,0 +1,14 @@
+nav {
+  min-width: 18%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 760px) {
+  nav {
+    min-width: auto;
+    flex-direction: row;
+  }
+}
